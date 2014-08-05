@@ -14,9 +14,23 @@ chai.should();
 
 var minifunct = require('../lib/minifunct.js');
 
-describe('minifunct', function(){
-    it('is defined', function(){
-      minifunct.should.be.a('function');
+describe('minifunct', function() {
+    it('is defined', function() {
+        minifunct.should.be.a('object');
     });
+
+    describe('minifunct', function() {
+        it('is defined', function() {
+            minifunct.each.should.be.a('function');
+        });
+
+        it('act as foreach', function() {
+            var ret = 0;
+            minifunct.each([1,2,3,4],function(v){ret+=v;});
+            ret.should.be.equal(10);
+        });
+    });
+
+
 
 });
