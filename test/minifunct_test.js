@@ -44,4 +44,16 @@ describe('minifunct', function() {
     });
 
 
+    describe('inArray', function() {
+        it('is defined', function() {
+            minifunct.inArray.should.be.a('function');
+        });
+
+        it('act as inArray', function() {
+            var ret = minifunct.inArray([1,2,3,4],2);
+            ret.should.be.equal(true);
+        });
+    });
+
+
 });
