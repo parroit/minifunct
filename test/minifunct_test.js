@@ -19,7 +19,7 @@ describe('minifunct', function() {
         minifunct.should.be.a('object');
     });
 
-    describe('minifunct', function() {
+    describe('each', function() {
         it('is defined', function() {
             minifunct.each.should.be.a('function');
         });
@@ -31,6 +31,17 @@ describe('minifunct', function() {
         });
     });
 
+
+    describe('indexOf', function() {
+        it('is defined', function() {
+            minifunct.indexOf.should.be.a('function');
+        });
+
+        it('act as indexOf', function() {
+            var ret = minifunct.indexOf([1,2,3,4],2);
+            ret.should.be.equal(1);
+        });
+    });
 
 
 });
